@@ -8,6 +8,8 @@ public class GoodCreator : MonoBehaviour
     [SerializeField] private Canvas _canvas;
     [SerializeField] private ContentSizeFitter _parent;
     [SerializeField] private CanvasGroup _goodsPanel;
+    [SerializeField] private CanvasGroup _restartButton;
+
 
     [SerializeField] private Good[] _goods;
     [SerializeField] private List<Good> _createdGoods;
@@ -28,8 +30,17 @@ public class GoodCreator : MonoBehaviour
         GoodTaker.GoodTaked -= OnGoodTaked;
     }
 
-    private void Start()
+    public void CreateGoods()
     {
+        if(_createdGoods.Count > 0)
+        {
+            RemoveGoods();
+        }
+
+        _restartButton.alpha = 0;
+        _restartButton.interactable = false;
+        _restartButton.blocksRaycasts = false;
+
         _currentSpawnedGoods = Random.Range(_minGoodForSpawn, _maxGoodForSpawn);
 
         for (int i = 0; i < _currentSpawnedGoods; i++)
@@ -41,12 +52,27 @@ public class GoodCreator : MonoBehaviour
         }
     }
 
+    public void RemoveGoods()
+    {
+        if(_createdGoods.Count > 0) 
+        {
+            foreach (var good in _createdGoods)
+            {
+                Destroy(good.gameObject);
+            }
+             _createdGoods.Clear();
+        }
+    }
+
     private void OnGoodTaked(Good good)
     {
         _createdGoods.Remove(good);
         if(_createdGoods.Count <= 0)
         {
             _wallet.AddMoney(_money);
+            _restartButton.alpha = 1;
+            _restartButton.interactable = true;
+            _restartButton.blocksRaycasts = true;
         }
     }
 }

@@ -9,9 +9,6 @@ public class Interactor : MonoBehaviour
     [SerializeField] private float _range;
     [SerializeField] private LayerMask _interactionLayer;
 
-    private Interactable _taking = null;
-
-
     void Update()
     {
         RaycastHit hit;
@@ -24,18 +21,9 @@ public class Interactor : MonoBehaviour
                 if (hit.collider.TryGetComponent(out Interactable interactable))
                 {
                     interactable.Interact();
-                    if (interactable.IsTaking)
-                    {
-                        _taking = interactable;
-                    }
                 }
             }
 
-        }
-        if (Input.GetKeyUp(KeyCode.E) && _taking != null)
-        {
-            _taking.Interact();
-            _taking = null;
         }
     }
 }
