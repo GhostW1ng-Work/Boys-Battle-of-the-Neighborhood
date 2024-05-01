@@ -14,10 +14,10 @@ public enum Goods
 public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     [SerializeField] private Goods _goodType;
-    [SerializeField] private Canvas _canvas;
-    [SerializeField] private ContentSizeFitter _parent;
-    [SerializeField] private CanvasGroup _goodsPanel;
 
+    private Canvas _canvas;
+    private ContentSizeFitter _parent;
+    private CanvasGroup _goodsPanel;
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
 
@@ -56,5 +56,12 @@ public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     public void OnDrop(PointerEventData eventData)
     {
 
+    }
+
+    public void Initialize(Canvas canvas, ContentSizeFitter parent, CanvasGroup goodsPanel)
+    {
+        _canvas = canvas;
+        _parent = parent;
+        _goodsPanel = goodsPanel;
     }
 }
