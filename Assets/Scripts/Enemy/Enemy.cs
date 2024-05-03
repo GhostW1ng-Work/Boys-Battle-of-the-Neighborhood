@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -12,10 +10,25 @@ public class Enemy : MonoBehaviour
 
     public event Action Died;
 
-    private void Start()
+    private void Awake()
     {
         _currentHealth = _maxHealth;
         _playerSetter = GetComponent<PlayerSetter>();
+    }
+
+    private void OnEnable()
+    {
+        _playerSetter.PlayerLosed += OnPlayerLosed;
+    }
+
+    private void OnDisable()
+    {
+        _playerSetter.PlayerLosed -= OnPlayerLosed;
+    }
+
+    private void OnPlayerLosed()
+    {
+        _currentHealth = _maxHealth;
     }
 
     public void TakeDamage(int damage)

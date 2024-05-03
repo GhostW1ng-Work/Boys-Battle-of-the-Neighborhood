@@ -1,5 +1,6 @@
 using Cinemachine;
 using StarterAssets;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ public class PlayerSetter : Interactable
 
     private bool _playerIsStay = false;
     private Enemy _enemy;
+
+    public event Action PlayerLosed;
 
     public bool PlayerIsStay => _playerIsStay;
 
@@ -58,6 +61,7 @@ public class PlayerSetter : Interactable
 
     private void OnPlayerDied()
     {
+        PlayerLosed?.Invoke();
         _playerIsStay = false;
         _brain.enabled = true;
         _player.SetTarget(null);
