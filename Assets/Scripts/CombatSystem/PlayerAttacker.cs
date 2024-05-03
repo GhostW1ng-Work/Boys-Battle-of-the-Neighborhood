@@ -1,76 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAttacker : MonoBehaviour
 {
-    [SerializeField] private List<AttackScriptableObject> _combo;
+    [SerializeField] private Enemy _currentEnemy;
     [SerializeField] private Weapon _weapon;
+    [SerializeField] private float _attackCooldown;
 
+    private float _currentTimer = 0;
     private Animator _animator;
-
-    private float _lastClickedTime;
-    private float _lastComboEnd;
-    private int _comboCounter;
+    private PlayerInput _input;
 
     private void Start()
     {
+        _input = GetComponent<PlayerInput>();
         _animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (_currentEnemy != null)
         {
-            Attack();
-        }
-        ExitAttack();
-    }
-
-    private void Attack()
-    {
-        if(Time.time > 0.2f && _comboCounter <= _combo.Count)
-        {
-            CancelInvoke(nameof(EndCombo));
-
-            if(Time.time - _lastClickedTime >= 0.2f)
+            if (_currentTimer > 0)
             {
-                _animator.runtimeAnimatorController = _combo[_comboCounter].AnimatorOV;
-                _animator.Play("Attack", 0, 0);
-                _comboCounter++;
+                _currentTimer -= Time.deltaTime;
+            }
 
-                _lastClickedTime = Time.time;
-
-                if(_comboCounter >= _combo.Count)
-                {
-                    _comboCounter = 0;
-                }
+            if (Input.GetMouseButtonDown(0) && _currentTimer <= 0)
+            {
+                Attack();
             }
         }
     }
 
-    private void ExitAttack()
+    private void Attack()
     {
-        if(_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f 
-            && _animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            Invoke(nameof(EndCombo), 1);
-        }
+        _currentEnemy.TakeDamage(_weapon.Damage);
+        _animator.Play(nameof(Attack),0,0);
+        _currentTimer = _attackCooldown;
     }
 
-    private void EndCombo()
+    public void SetInput(bool enabled)
     {
-        _comboCounter = 0;
-        _lastComboEnd = Time.time;
+        _input.enabled = enabled;
     }
 
-    public void EnableCollider()
+    public void SetTarget(Enemy enemy)
     {
-        _weapon.EnableCollider(true);
-    }
-
-    public void DisableCollider()
-    {
-        _weapon.EnableCollider(false);
+        _currentEnemy = enemy;
     }
 }
