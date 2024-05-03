@@ -27,5 +27,6 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         PlayerDied?.Invoke();
+        _currentHealth = _maxHealth;
     }
 }

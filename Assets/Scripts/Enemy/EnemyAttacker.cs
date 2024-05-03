@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAttacker : MonoBehaviour
 {
     [SerializeField] private PlayerHealth _playerHealth;
+    [SerializeField] private Animator _animator;
     [SerializeField] private float _attackSpeed;
     [SerializeField] private int _damage;
 
@@ -32,6 +33,7 @@ public class EnemyAttacker : MonoBehaviour
 
     private void Attack()
     {
+        _animator.Play(nameof(Attack),0,0);
         _playerHealth.TakeDamage(_damage);
     }
 }
