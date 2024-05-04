@@ -4371,6 +4371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  _armorHandler: {fileID: 2091621794}
 --- !u!1 &1657905385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5184,7 +5185,7 @@ MonoBehaviour:
   _playerHealth: {fileID: 1654743380}
   _animator: {fileID: 3344797553050645925}
   _attackSpeed: 2
-  _damage: 10
+  _damage: 4
 --- !u!1 &58667447296113094
 GameObject:
   m_ObjectHideFlags: 0

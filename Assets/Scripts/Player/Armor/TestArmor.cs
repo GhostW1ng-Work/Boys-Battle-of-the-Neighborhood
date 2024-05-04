@@ -10,15 +10,13 @@ public class TestArmor : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(_key1  ))
+        if (Input.GetKeyDown(_key1))
         {
-                _armorHandler.SetArmor(_head);
-                print(_armorHandler.GetArmorLevel().ToString());
+            _armorHandler.SetArmor(_head);
         }
         if (Input.GetKeyDown(_key2))
         {
             _armorHandler.SetArmor(_secondHead);
-            print(_armorHandler.GetArmorLevel().ToString());
         }
     }
 }
