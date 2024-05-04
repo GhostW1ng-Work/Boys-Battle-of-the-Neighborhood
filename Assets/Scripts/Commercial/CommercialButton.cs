@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class CommercialButton : MonoBehaviour
 {
     [SerializeField] private PlayerWallet _wallet;
+    [SerializeField] private MoneyEarner _moneyEarner;
     [SerializeField] private CanvasGroup _buyPanel;
     [SerializeField] private TMP_Text _buildingName;
     [SerializeField] private TMP_Text _priceText;
@@ -43,7 +44,7 @@ public class CommercialButton : MonoBehaviour
     {
         if(_wallet.Money >= _currentPrice)
         {
-            _wallet.AddRevenue(_currentRevenue);
+            _moneyEarner.IncreaseEarnPerSecond(_currentRevenue);
             DisablePanel();
         }
     }
