@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerWallet : MonoBehaviour
 {
     private int _revenue = 0;
-    private float _timeForRevenue = 1f;
+    private float _timeForRevenue = 60;
     private float _currentTime = 0;
 
     public int Money { get; private set; }
