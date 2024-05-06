@@ -5,10 +5,16 @@ using UnityEngine;
 public class ItemHandler : MonoBehaviour
 {
     [SerializeField] private List<ArmorButton> _armorButtons;
+    [SerializeField] private List<WeaponButton> _weaponButtons;
 
     public void AddButton(ArmorButton button)
     {
         _armorButtons.Add(button);
+    }
+
+    public void AddButton(WeaponButton button)
+    {
+        _weaponButtons.Add(button);
     }
 
     public void Clear()

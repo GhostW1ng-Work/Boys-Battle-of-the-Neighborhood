@@ -5,6 +5,7 @@ public class PlayerAttacker : MonoBehaviour
 {
     [SerializeField] private Enemy _currentEnemy;
     [SerializeField] private Weapon _weapon;
+    [SerializeField] private int _armDamage;
     [SerializeField] private float _attackCooldown;
 
     private float _currentTimer = 0;
@@ -35,7 +36,15 @@ public class PlayerAttacker : MonoBehaviour
 
     private void Attack()
     {
-        _currentEnemy.TakeDamage(_weapon.Damage);
+        if(_weapon != null)
+        {
+            _currentEnemy.TakeDamage(_weapon.Damage);
+        }
+        else
+        {
+            _currentEnemy.TakeDamage(_armDamage);
+        }
+
         _animator.Play(nameof(Attack),0,0);
         _currentTimer = _attackCooldown;
     }
@@ -48,5 +57,15 @@ public class PlayerAttacker : MonoBehaviour
     public void SetTarget(Enemy enemy)
     {
         _currentEnemy = enemy;
+    }
+
+    public void SetWeapon(Weapon weapon)
+    {
+        if(_weapon != null)
+        {
+            _weapon.gameObject.SetActive(false);
+        }
+        _weapon = weapon;
+        weapon.gameObject.SetActive(true);
     }
 }
