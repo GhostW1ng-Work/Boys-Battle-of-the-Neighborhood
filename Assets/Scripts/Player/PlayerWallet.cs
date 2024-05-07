@@ -3,13 +3,21 @@ using UnityEngine;
 
 public class PlayerWallet : MonoBehaviour
 {
+    private const string PLAYER_MONEY = "playerMoney";
     public int Money { get; private set; }
 
     public event Action<int> MoneyChanged;
 
     private void Start()
     {
-        Money = 0;
+        if (PlayerPrefs.HasKey(PLAYER_MONEY))
+        {
+            Money = PlayerPrefs.GetInt(PLAYER_MONEY);
+        }
+        else
+        {
+            Money = 0;
+        }
         MoneyChanged?.Invoke(Money);
     }
 
@@ -17,11 +25,15 @@ public class PlayerWallet : MonoBehaviour
     {
         Money += moneyAmount;
         MoneyChanged?.Invoke(Money);
+        PlayerPrefs.SetInt(PLAYER_MONEY, Money);
+        PlayerPrefs.Save();
     }
 
     public void SpendMoney(int moneyCount)
     {
-       Money -= moneyCount;
+        Money -= moneyCount;
         MoneyChanged?.Invoke(Money);
+        PlayerPrefs.SetInt(PLAYER_MONEY, Money);
+        PlayerPrefs.Save();
     }
 }
