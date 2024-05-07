@@ -134,8 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcdc9ebb1768464993aae95c51533e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wallet: {fileID: 0}
   _playerAttacker: {fileID: 0}
   _weapon: {fileID: 0}
+  _priceText: {fileID: 7551544637315497892}
+  _price: 5
+  _isBuyed: 0
 --- !u!1 &4912042901263500601
 GameObject:
   m_ObjectHideFlags: 0

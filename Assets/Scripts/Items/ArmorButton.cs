@@ -32,16 +32,10 @@ public class ArmorButton : MonoBehaviour
         _button.onClick.AddListener(OnClick);
         if (!_isBuyed)
         {
-            if (_wallet.Money >= _price)
-            {
-                _wallet.SpendMoney(_price);
-                _armorHandler.SetArmor(_armor);
-                _priceText.text = "Выбрать";
-            }
+            _priceText.text = _price.ToString();
         }
         else
         {
-            _armorHandler.SetArmor(_armor);
             _priceText.text = "Выбрать";
         }
     }

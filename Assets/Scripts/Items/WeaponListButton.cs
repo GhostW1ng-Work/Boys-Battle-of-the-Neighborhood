@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class WeaponListButton : MonoBehaviour
 {
+    [SerializeField] private PlayerWallet _playerWallet;
     [SerializeField] private ItemHandler _itemHandler;
     [SerializeField] private List<WeaponButton> _weaponButtons;
     [SerializeField] private List<Weapon> _weapons;
@@ -42,6 +43,7 @@ public class WeaponListButton : MonoBehaviour
             WeaponButton newButton = Instantiate(_weaponButtons[i]);
             newButton.SetArmorHandler(_armorHandler);
             newButton.SetArmor(_weapons[i]);
+            newButton.SetPlayerWallet(_playerWallet);
             newButton.transform.parent = _contentParent;
             _itemHandler.AddButton(newButton);
         }

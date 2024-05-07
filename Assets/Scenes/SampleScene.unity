@@ -1976,6 +1976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdd5f1d2185337479c5854b8454fd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerWallet: {fileID: 1654743376}
   _itemHandler: {fileID: 1009562546}
   _weaponButtons:
   - {fileID: 1955161695828612589, guid: 4aaed9e449d48fa40a81b47db0c348f0, type: 3}
