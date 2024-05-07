@@ -23,11 +23,21 @@ public class ItemHandler : MonoBehaviour
         {
             Destroy(_armorButtons[i].gameObject);
         }
+        for (int i = 0; i < _weaponButtons.Count; i++)
+        {
+            Destroy(_weaponButtons[i].gameObject);
+        }
+        _weaponButtons.Clear();
         _armorButtons.Clear();
     }
 
     public int GetButtonsCount()
     {
         return _armorButtons.Count;
+    }
+
+    public int GetButtonWeaponsCount()
+    {
+        return _weaponButtons.Count;
     }
 }

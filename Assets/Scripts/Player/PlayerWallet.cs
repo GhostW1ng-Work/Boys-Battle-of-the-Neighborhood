@@ -18,4 +18,10 @@ public class PlayerWallet : MonoBehaviour
         Money += moneyAmount;
         MoneyChanged?.Invoke(Money);
     }
+
+    public void SpendMoney(int moneyCount)
+    {
+       Money -= moneyCount;
+        MoneyChanged?.Invoke(Money);
+    }
 }

@@ -1,10 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ArmorListButton : MonoBehaviour
 {
+    [SerializeField] private PlayerWallet _playerWallet;
     [SerializeField] private ItemHandler _itemHandler;
     [SerializeField] private List<ArmorButton> _armorButton;
     [SerializeField] private List<Armor> _armors;
@@ -34,12 +34,16 @@ public class ArmorListButton : MonoBehaviour
         {
             _itemHandler.Clear();
         }
-
+        if (_itemHandler.GetButtonWeaponsCount() > 0)
+        {
+            _itemHandler.Clear();
+        }
         for (int i = 0; i < _armorButton.Count; i++)
         {
             ArmorButton newButton = Instantiate(_armorButton[i]);
             newButton.SetArmorHandler(_armorHandler);
             newButton.SetArmor(_armors[i]);
+            newButton.SetPlayerWallet(_playerWallet);
             newButton.transform.parent = _contentParent;
             _itemHandler.AddButton(newButton);
         }

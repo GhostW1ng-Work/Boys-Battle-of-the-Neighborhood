@@ -268,5 +268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab633afef0bfad448053b7e58cdd24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wallet: {fileID: 0}
   _armorHandler: {fileID: 0}
   _armor: {fileID: 0}
+  _priceText: {fileID: 5794471689627256329}
+  _price: 0
+  _isBuyed: 1

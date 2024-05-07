@@ -1012,6 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdf2dc500730744586b6872ccca73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerWallet: {fileID: 1654743376}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 7840288928321907186, guid: 39ba733544fe8d640974a4bd3f8ee35d, type: 3}
@@ -3172,7 +3173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 135756642000475821, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: cursorLocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 135756642000475821, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: cursorInputForLook
@@ -5641,6 +5642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdf2dc500730744586b6872ccca73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerWallet: {fileID: 1654743376}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 950737438909765838, guid: 7f6cc69d60ffb42448334912f86cdffd, type: 3}
@@ -7803,6 +7805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdf2dc500730744586b6872ccca73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerWallet: {fileID: 1654743376}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 7380827688725014546, guid: 688ff8aa6502679438cbe9ee3129fca1, type: 3}
@@ -8755,6 +8758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdf2dc500730744586b6872ccca73ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerWallet: {fileID: 1654743376}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 4324507989156370640, guid: 765f5a15bf8356b4abffa6ae58ea9946, type: 3}

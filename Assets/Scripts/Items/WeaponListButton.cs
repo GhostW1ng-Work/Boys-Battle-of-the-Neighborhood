@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,11 +29,14 @@ public class WeaponListButton : MonoBehaviour
 
     private void OnClick()
     {
+        if (_itemHandler.GetButtonWeaponsCount() > 0)
+        {
+            _itemHandler.Clear();
+        }
         if (_itemHandler.GetButtonsCount() > 0)
         {
             _itemHandler.Clear();
         }
-
         for (int i = 0; i < _weaponButtons.Count; i++)
         {
             WeaponButton newButton = Instantiate(_weaponButtons[i]);
