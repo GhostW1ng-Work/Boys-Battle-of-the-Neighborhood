@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     private PlayerSetter _playerSetter;
     private int _isDied = 0;
 
+    public float MaxHealth => _maxHealth;
+    public float CurrentHealth => _currentHealth;
+
     public event Action Died;
 
     private void Awake()

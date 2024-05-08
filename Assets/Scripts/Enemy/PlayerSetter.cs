@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerSetter : Interactable
 {
     [SerializeField] private PlayerAttacker _player;
+    [SerializeField] private HealthBar _healthBar;
     [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private ThirdPersonController _controller;
     [SerializeField] private Camera _camera;
@@ -44,6 +45,7 @@ public class PlayerSetter : Interactable
     {
         if (!_playerIsStay)
         {
+            _healthBar.EnableBar(_enemy);
             _playerIsStay = true;
             StartCoroutine(SetPlayer());
             _brain.enabled = false;
@@ -52,6 +54,7 @@ public class PlayerSetter : Interactable
         }
         else
         {
+            _healthBar.gameObject.SetActive(false);
             _playerIsStay = false;
             _brain.enabled = true;
             _player.SetTarget(null);
@@ -61,6 +64,7 @@ public class PlayerSetter : Interactable
 
     private void OnPlayerDied()
     {
+        _healthBar.gameObject.SetActive(false);
         PlayerLosed?.Invoke();
         _playerIsStay = false;
         _brain.enabled = true;
@@ -70,6 +74,7 @@ public class PlayerSetter : Interactable
 
     private void OnDied()
     {
+        _healthBar.gameObject.SetActive(false);
         _playerIsStay = false;
         _brain.enabled = true;
         _player.SetTarget(null);
