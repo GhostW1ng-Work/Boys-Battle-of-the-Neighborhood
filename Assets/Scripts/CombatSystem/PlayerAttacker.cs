@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using YG;
 
 public class PlayerAttacker : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class PlayerAttacker : MonoBehaviour
     {
         _input = GetComponent<PlayerInput>();
         _animator = GetComponent<Animator>();
+        _weapon = YandexGame.savesData.currentWeapon;
+        if(_weapon != null)
+        {
+            _weapon.gameObject.SetActive(true);
+        }
     }
 
     private void Update()
@@ -67,5 +73,7 @@ public class PlayerAttacker : MonoBehaviour
         }
         _weapon = weapon;
         weapon.gameObject.SetActive(true);
+        YandexGame.savesData.currentWeapon = weapon;
+        YandexGame.SaveProgress();
     }
 }

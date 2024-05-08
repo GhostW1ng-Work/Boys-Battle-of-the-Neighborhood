@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace YG
 {
     [System.Serializable]
@@ -17,7 +19,8 @@ namespace YG
         public bool[] openLevels = new bool[3];
 
         // Ваши сохранения
-
+        public Weapon currentWeapon = null;
+        public List<Armor> armor = new List<Armor>();
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

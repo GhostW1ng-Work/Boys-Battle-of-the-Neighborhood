@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 using static UnityEditor.Progress;
 
 public class ArmorHandler : MonoBehaviour
@@ -11,7 +12,11 @@ public class ArmorHandler : MonoBehaviour
 
     private void Start()
     {
-        _armor = new List<Armor>();
+        _armor = YandexGame.savesData.armor;
+        for (int i = 0; i < _armor.Count; i++)
+        {
+            _armor[i].gameObject.SetActive(true);
+        }
     }
 
     public int GetArmorLevel()
@@ -44,5 +49,7 @@ public class ArmorHandler : MonoBehaviour
        
         _armor.Add(armor);
         armor.gameObject.SetActive(true);
+        YandexGame.savesData.armor = _armor;
+        YandexGame.SaveProgress();
     }
 }
