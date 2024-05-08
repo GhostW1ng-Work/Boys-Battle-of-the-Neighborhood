@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using YG;
-using static UnityEditor.Progress;
 
 public class ArmorHandler : MonoBehaviour
 {
