@@ -12162,9 +12162,16 @@ MonoBehaviour:
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: 9d1e5abd35769c748b5914733eadd6cc, type: 3}
+  - {fileID: 3432154687201770121, guid: f2f77763e054c85408022c907def8d9e, type: 3}
+  - {fileID: 3432154687201770121, guid: e81e711c2cad4c0458259289b9a550ab, type: 3}
   - {fileID: 3432154687201770121, guid: e056f17f01d4815489bb3c5bca0d3366, type: 3}
+  - {fileID: 3432154687201770121, guid: 18e86898827052347b80d31ba8e3cf2a, type: 3}
   _armors:
   - {fileID: 7651565523176539555}
+  - {fileID: 7882548468603699005}
+  - {fileID: 7882548468603699005}
+  - {fileID: 6144653381243813587}
+  - {fileID: 6144653381243813587}
   - {fileID: 6144653381243813587}
   _armorHandler: {fileID: 2091621794}
   _contentParent: {fileID: 1009562543}
@@ -35921,7 +35928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 1
+  _armorCount: 3
   _armorType: 1
 --- !u!1 &6181267198372896723
 GameObject:
@@ -36748,6 +36755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6910110960888022174}
   - component: {fileID: 5744305373537293292}
+  - component: {fileID: 7882548468603699005}
   m_Layer: 6
   m_Name: Man_Pullover_Mesh
   m_TagString: Untagged
@@ -36755,6 +36763,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7882548468603699005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882548468603699004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _armorCount: 1
+  _armorType: 1
 --- !u!1 &7904896079325500125
 GameObject:
   m_ObjectHideFlags: 0
