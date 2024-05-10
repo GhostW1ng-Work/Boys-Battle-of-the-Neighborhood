@@ -21889,9 +21889,15 @@ MonoBehaviour:
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: 7dd385aa580e40142999b83dd96c501c, type: 3}
+  - {fileID: 3432154687201770121, guid: d9d716beb6d3cc3408df772037d39a1d, type: 3}
   - {fileID: 3432154687201770121, guid: 3040680541f52d744bc32e5bae79d06c, type: 3}
+  - {fileID: 3432154687201770121, guid: 25ac2feef6c805d4ea209aac6b9652d1, type: 3}
+  - {fileID: 3432154687201770121, guid: 34bee90e2e4df6b49a0897954da24699, type: 3}
   _armors:
   - {fileID: 9097917789702460164}
+  - {fileID: 6133138605251758630}
+  - {fileID: 6133138605251758630}
+  - {fileID: 6133138605251758630}
   - {fileID: 6133138605251758630}
   _armorHandler: {fileID: 2091621794}
   _contentParent: {fileID: 1009562543}
