@@ -26,8 +26,8 @@ public class PlayerStatsUpdater : MonoBehaviour
     private void Start()
     {
         int armorCount = 0;
-        if(_attacker.Weapon != null)
-            _attackText.text = _attacker.Weapon.Damage.ToString();
+        if(YandexGame.savesData.currentWeapon != null)
+            _attackText.text = YandexGame.savesData.currentWeapon.Damage.ToString();
         else
             _attackText.text = _attacker.ArmDamage.ToString();
 

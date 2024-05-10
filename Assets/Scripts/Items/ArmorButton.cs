@@ -10,17 +10,14 @@ public class ArmorButton : MonoBehaviour
     [SerializeField] private ArmorHandler _armorHandler;
     [SerializeField] private Armor _armor;
     [SerializeField] private TMP_Text _priceText;
+    [SerializeField] private TMP_Text _armoraText;
     [SerializeField] private int _price;
     [SerializeField] private int _isBuyed;
+    [SerializeField] private bool _startItem = false;
 
-    private Button _button;
+    [SerializeField] private Button _button;
 
     public static event Action ArmorLevelChanged;
-
-    private void Awake()
-    {
-        _button = GetComponent<Button>();
-    }
 
     private void OnEnable()
     {
@@ -69,7 +66,10 @@ public class ArmorButton : MonoBehaviour
         }
         else
         {
-            _isBuyed = 0;
+            if (_startItem)
+                _isBuyed = 1;
+            else
+                _isBuyed = 0;
         }
 
         if (_isBuyed == 0)
@@ -80,6 +80,7 @@ public class ArmorButton : MonoBehaviour
         { 
             _priceText.text = "Выбрать";
         }
+        _armoraText.text = _armor.ArmorCount.ToString();
     }
 
     public void SetPlayerWallet(PlayerWallet wallet)

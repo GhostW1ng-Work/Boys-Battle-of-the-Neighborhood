@@ -10,17 +10,13 @@ public class WeaponButton : MonoBehaviour
     [SerializeField] private PlayerAttacker _playerAttacker;
     [SerializeField] private Weapon _weapon;
     [SerializeField] private TMP_Text _priceText;
+    [SerializeField] private TMP_Text _damageText;
     [SerializeField] private int _price;
     [SerializeField] private int _isBuyed;
 
-    private Button _button;
+    [SerializeField] private Button _button;
 
     public static event Action<Weapon> WeaponChanged;
-
-    private void Awake()
-    {
-        _button = GetComponent<Button>();
-    }
 
     private void OnEnable()
     {
@@ -80,6 +76,7 @@ public class WeaponButton : MonoBehaviour
         {
             _priceText.text = "Выбрать";
         }
+        _damageText.text = _weapon.Damage.ToString();
     }
 
     public void SetPlayerWallet(PlayerWallet wallet)
