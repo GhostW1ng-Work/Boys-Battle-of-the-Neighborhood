@@ -13,6 +13,9 @@ public class PlayerAttacker : MonoBehaviour
     private Animator _animator;
     private PlayerInput _input;
 
+    public int ArmDamage => _armDamage;
+    public Weapon Weapon => _weapon;
+
     private void Start()
     {
         _input = GetComponent<PlayerInput>();

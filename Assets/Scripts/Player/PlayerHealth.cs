@@ -8,6 +8,9 @@ public class PlayerHealth : MonoBehaviour
 
     private int _currentHealth;
 
+    public int MaxHealth => _maxHealth;
+    public int CurrentHealth => _currentHealth;
+
     public event Action PlayerDied;
 
     private void Start()
@@ -20,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
         damage -= _armorHandler.GetArmorLevel();
         if (damage <= 0)
             damage = 1;
-        print(damage);
+
         _currentHealth -= damage;
         if(_currentHealth <= 0)
         {

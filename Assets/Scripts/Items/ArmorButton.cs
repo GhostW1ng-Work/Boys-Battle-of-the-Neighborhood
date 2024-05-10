@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,8 @@ public class ArmorButton : MonoBehaviour
     [SerializeField] private int _isBuyed;
 
     private Button _button;
+
+    public static event Action ArmorLevelChanged;
 
     private void Awake()
     {
@@ -35,17 +38,20 @@ public class ArmorButton : MonoBehaviour
         {
             if(_wallet.Money >= _price)
             {
+                _isBuyed = 1;
                 _wallet.SpendMoney(_price);
                 _armorHandler.SetArmor(_armor);
                 _priceText.text = "Выбрать";
                 PlayerPrefs.SetInt(_armor.name + IS_BUYED, 1);
                 PlayerPrefs.Save();
+                ArmorLevelChanged?.Invoke();
             }
         }
         else
         {
             _armorHandler.SetArmor(_armor);
             _priceText.text = "Выбрать";
+            ArmorLevelChanged?.Invoke();
         }
     }
 

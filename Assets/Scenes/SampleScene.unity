@@ -4508,7 +4508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773715607}
   - component: {fileID: 773715609}
-  - component: {fileID: 773715608}
+  - component: {fileID: 773715610}
   m_Layer: 5
   m_Name: PlayerHealth
   m_TagString: Untagged
@@ -4538,19 +4538,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.4199829, y: 0}
   m_SizeDelta: {x: -0.83999634, y: -2.692398}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &773715608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773715606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8782604e95802314bb869b69461fab94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 0.003
 --- !u!114 &773715609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4602,6 +4589,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &773715610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773715606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e09351ccbef1534d97f03a9c66120ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 0.003
+  _player: {fileID: 1654743380}
 --- !u!1 &773966064
 GameObject:
   m_ObjectHideFlags: 0
@@ -11599,6 +11600,7 @@ GameObject:
   - component: {fileID: 1856595695}
   - component: {fileID: 1856595697}
   - component: {fileID: 1856595696}
+  - component: {fileID: 1856595698}
   m_Layer: 5
   m_Name: PlayerStats
   m_TagString: Untagged
@@ -11668,6 +11670,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856595694}
   m_CullTransparentMesh: 1
+--- !u!114 &1856595698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856595694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5999879793b57464a9579dcda313c99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attacker: {fileID: 1654743378}
+  _armorHandler: {fileID: 2091621794}
+  _attackText: {fileID: 970218813}
+  _armorText: {fileID: 311817179}
 --- !u!1 &1910189177
 GameObject:
   m_ObjectHideFlags: 0
@@ -12819,7 +12837,7 @@ MonoBehaviour:
   _playerHealth: {fileID: 1654743380}
   _animator: {fileID: 3344797553050645925}
   _attackSpeed: 2
-  _damage: 4
+  _damage: 20
 --- !u!1 &58667447296113094
 GameObject:
   m_ObjectHideFlags: 0

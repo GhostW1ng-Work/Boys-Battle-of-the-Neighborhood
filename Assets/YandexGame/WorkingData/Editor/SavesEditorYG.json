@@ -1,5 +1,5 @@
 {
-    "idSave": 1,
+    "idSave": 22,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -11,7 +11,20 @@
         false
     ],
     "currentWeapon": {
-        "instanceID": 61972
+        "instanceID": 29078
     },
-    "armor": []
+    "armor": [
+        {
+            "instanceID": 28572
+        },
+        {
+            "instanceID": 30018
+        },
+        {
+            "instanceID": 30006
+        },
+        {
+            "instanceID": 30112
+        }
+    ]
 }
