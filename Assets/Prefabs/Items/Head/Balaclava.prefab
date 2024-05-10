@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 559750777b8e3a14683a85676bc58b34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c57db7bd40fa5941aa8f164f01cdd8c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -523,6 +523,7 @@ MonoBehaviour:
   _armoraText: {fileID: 4397166896976723450}
   _price: 5
   _isBuyed: 0
+  _startItem: 0
   _button: {fileID: 5648729430534975580}
 --- !u!1 &8626146899856787737
 GameObject:
