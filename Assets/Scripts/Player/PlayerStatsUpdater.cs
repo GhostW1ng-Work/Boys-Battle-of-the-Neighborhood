@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using YG;
+using static UnityEditor.Progress;
 
 public class PlayerStatsUpdater : MonoBehaviour
 {
@@ -23,12 +25,18 @@ public class PlayerStatsUpdater : MonoBehaviour
 
     private void Start()
     {
+        int armorCount = 0;
         if(_attacker.Weapon != null)
             _attackText.text = _attacker.Weapon.Damage.ToString();
         else
             _attackText.text = _attacker.ArmDamage.ToString();
 
-        _armorText.text = _armorHandler.GetArmorLevel().ToString();
+        foreach (var item in YandexGame.savesData.armor)
+        {
+            armorCount += item.ArmorCount;
+      
+        }
+        _armorText.text = armorCount.ToString();
     }
 
     private void OnWeaponChanged(Weapon weapon)
