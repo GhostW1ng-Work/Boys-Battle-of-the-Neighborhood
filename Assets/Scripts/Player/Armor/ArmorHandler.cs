@@ -11,9 +11,12 @@ public class ArmorHandler : MonoBehaviour
     private void Start()
     {
         _armor = YandexGame.savesData.armor;
-        for (int i = 0; i < _armor.Count; i++)
+        if(YandexGame.savesData.armor.Count > 0)
         {
-            _armor[i].gameObject.SetActive(true);
+            for (int i = 0; i < _armor.Count; i++)
+            {
+                _armor[i].gameObject.SetActive(true);
+            }
         }
     }
 

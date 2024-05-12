@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public enum Goods
 {
     Milk,
-    Cheese
+    Meat,
+    Sweets
 }
 
 public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler

@@ -1,5 +1,5 @@
 {
-    "idSave": 9,
+    "idSave": 4,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -15,7 +15,16 @@
     },
     "armor": [
         {
-            "instanceID": -74502
+            "instanceID": 30488
+        },
+        {
+            "instanceID": 31874
+        },
+        {
+            "instanceID": 31940
+        },
+        {
+            "instanceID": 31962
         }
     ]
 }
