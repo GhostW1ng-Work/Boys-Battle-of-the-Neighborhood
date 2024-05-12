@@ -13,7 +13,8 @@ public enum Goods
     Box,
     Mail,
     Parcel,
-    Magazine
+    Magazine,
+    Gear
 }
 
 public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
