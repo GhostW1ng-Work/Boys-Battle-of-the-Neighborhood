@@ -16,7 +16,7 @@ public class MoneyReceiver : MonoBehaviour
 
     private void Start()
     {
-        //_moneyCount = YandexGame.savesData.moneyReceiverCount;
+        _moneyCount = YandexGame.savesData.earnedMoneyCount;
         _moneyText.text = _moneyText.text = "$" + _moneyCount.ToString("#,#", CultureInfo.InvariantCulture);
     }
 
@@ -38,8 +38,8 @@ public class MoneyReceiver : MonoBehaviour
             wallet.AddMoney(_moneyCount);
             _moneyCount = 0;
             _moneyText.text = _moneyText.text = "$" + _moneyCount.ToString("#,#", CultureInfo.InvariantCulture);
-/*            YandexGame.savesData.moneyReceiverCount = _moneyCount;
-            YandexGame.SaveProgress();*/
+            YandexGame.savesData.earnedMoneyCount = _moneyCount;
+            YandexGame.SaveProgress();
         }
     }
 
@@ -49,8 +49,8 @@ public class MoneyReceiver : MonoBehaviour
         {
             _moneyCount += earnedMoney;
             _moneyText.text = _moneyText.text = "$" + _moneyCount.ToString("#,#", CultureInfo.InvariantCulture);
-/*            YandexGame.savesData.moneyReceiverCount = _moneyCount;
-            YandexGame.SaveProgress();*/
+            YandexGame.savesData.earnedMoneyCount = _moneyCount;
+            YandexGame.SaveProgress();
         }
     }
 }

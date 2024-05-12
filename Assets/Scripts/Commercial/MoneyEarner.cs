@@ -22,6 +22,7 @@ public class MoneyEarner : MonoBehaviour
     private void Start()
     {
         _timeLeft = _timeForRevenue;
+        _currentEarnPerSecond = YandexGame.savesData.currentEarnPerTime;
 /*        _currentMultiplier = YandexGame.savesData.currentMultiplier;
         _hasMagnet = YandexGame.savesData.hasMagnet;
         _currentEarnPerSecond = YandexGame.savesData.earnPerSecond;*/
@@ -41,6 +42,8 @@ public class MoneyEarner : MonoBehaviour
     public void IncreaseEarnPerSecond(int sum)
     {
         _currentEarnPerSecond += sum;
+        YandexGame.savesData.currentEarnPerTime = _currentEarnPerSecond;
+        YandexGame.SaveProgress();
     }
 
 /*    public void DoubleMultiplier()
