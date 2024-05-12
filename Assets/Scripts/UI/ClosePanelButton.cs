@@ -28,9 +28,7 @@ public class ClosePanelButton : MonoBehaviour
     private void OnClick()
     {
         _goodCreator.RemoveGoods();
-        _panel.alpha = 0;
-        _panel.interactable = false;
-        _panel.blocksRaycasts = false;
+        _panel.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         _input.enabled = true;
     }

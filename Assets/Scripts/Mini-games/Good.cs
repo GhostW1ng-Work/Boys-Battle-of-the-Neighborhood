@@ -9,7 +9,8 @@ public enum Goods
 {
     Milk,
     Meat,
-    Sweets
+    Sweets,
+    Box
 }
 
 public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler

@@ -9,9 +9,7 @@ public class MinigameActivator : Interactable
 
     public override void Interact()
     {
-        _minigame.alpha = 1;
-        _minigame.interactable = true;
-        _minigame.blocksRaycasts = true;
+        _minigame.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         _input.enabled = false;
         _creator.CreateGoods();
