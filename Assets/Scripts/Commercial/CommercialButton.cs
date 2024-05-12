@@ -11,6 +11,7 @@ public class CommercialButton : MonoBehaviour
     [SerializeField] private TMP_Text _priceText;
     [SerializeField] private TMP_Text _revenue;
 
+    private CommercialBuildingInteractable _interactable;
     private Button _button;
     private int _currentPrice = 0;
     private int _currentRevenue = 0;
@@ -30,8 +31,9 @@ public class CommercialButton : MonoBehaviour
         _button.onClick.RemoveListener(OnClick);
     }
 
-    public void SetButton(string buildingName, int price, int revenue)
+    public void SetButton(string buildingName, int price, int revenue, CommercialBuildingInteractable interactable)
     {
+        _interactable = interactable;
         _buildingName.text = buildingName;
         _priceText.text = price.ToString();
         _revenue.text = revenue.ToString();
@@ -44,6 +46,8 @@ public class CommercialButton : MonoBehaviour
     {
         if(_wallet.Money >= _currentPrice)
         {
+            _interactable.SetIsBuyed();
+            _wallet.SpendMoney(_currentPrice);
             _moneyEarner.IncreaseEarnPerSecond(_currentRevenue);
             DisablePanel();
         }
