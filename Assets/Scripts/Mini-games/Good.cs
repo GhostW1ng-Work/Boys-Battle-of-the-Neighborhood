@@ -10,7 +10,10 @@ public enum Goods
     Milk,
     Meat,
     Sweets,
-    Box
+    Box,
+    Mail,
+    Parcel,
+    Magazine
 }
 
 public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
