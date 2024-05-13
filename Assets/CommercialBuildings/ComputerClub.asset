@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buildingName: "\u041A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0439
     \u043A\u043B\u0443\u0431"
-  _price: 10
-  _revenue: 6
+  _price: 10000
+  _revenue: 900

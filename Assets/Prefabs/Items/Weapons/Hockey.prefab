@@ -597,7 +597,7 @@ MonoBehaviour:
   _weapon: {fileID: 0}
   _priceText: {fileID: 121102257676062327}
   _damageText: {fileID: 4397166896976723450}
-  _price: 7
+  _price: 80
   _isBuyed: 0
   _button: {fileID: 5648729430534975580}
 --- !u!1 &8626146899856787737

@@ -41,7 +41,7 @@ public class ArmorHandler : MonoBehaviour
     {
         for (int i = 0; i < _armor.Count; i++)
         {
-            if (_armor[i].ArmorType == armor.ArmorType)
+            if (_armor[i].ArmorType == armor.ArmorType && !_armor[i].IsBase)
             {
                 _armor[i].gameObject.SetActive(false);
                 _armor.Remove(_armor[i]);

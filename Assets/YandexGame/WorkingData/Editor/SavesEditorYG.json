@@ -1,5 +1,5 @@
 {
-    "idSave": 314,
+    "idSave": 427,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -11,19 +11,31 @@
         false
     ],
     "currentWeapon": {
-        "instanceID": 31812
+        "instanceID": 32440
     },
     "armor": [
         {
-            "instanceID": 31946
+            "instanceID": 32016
         },
         {
-            "instanceID": 31940
+            "instanceID": 30890
         },
         {
-            "instanceID": 31846
+            "instanceID": 32604
+        },
+        {
+            "instanceID": 32538
+        },
+        {
+            "instanceID": 33310
+        },
+        {
+            "instanceID": 32532
+        },
+        {
+            "instanceID": 32660
         }
     ],
-    "currentEarnPerTime": 5,
-    "earnedMoneyCount": 1345
+    "currentEarnPerTime": 0,
+    "earnedMoneyCount": 0
 }

@@ -1395,6 +1395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 1
   _armorType: 0
+  _isBase: 0
 --- !u!1 &142598033
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,8 +4001,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
+  m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8728,7 +8729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentEarnPerSecond: 0
-  _timeForRevenue: 1
+  _timeForRevenue: 60
 --- !u!1 &564285610
 GameObject:
   m_ObjectHideFlags: 0
@@ -12409,6 +12410,7 @@ RectTransform:
   - {fileID: 1836298321}
   - {fileID: 1026388768}
   - {fileID: 112940495}
+  - {fileID: 1871287647}
   m_Father: {fileID: 424843346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.23560418, y: 0.77322227}
@@ -12480,6 +12482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 0.003
+  _healthText: {fileID: 1871287648}
 --- !u!1 &831772944
 GameObject:
   m_ObjectHideFlags: 0
@@ -13041,7 +13044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.7237663, a: 0.41960785}
+  m_Color: {r: 1, g: 0, b: 0.7237663, a: 0.5176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13236,7 +13239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11665217, y: 0.2736316}
   m_AnchorMax: {x: 0.333, y: 0.41284215}
-  m_AnchoredPosition: {x: -0.49996948, y: 1.4400024}
+  m_AnchoredPosition: {x: -0.5, y: 1.4400024}
   m_SizeDelta: {x: 1, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &868733187
@@ -13936,7 +13939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.2121293, b: 0, a: 0.42745098}
+  m_Color: {r: 1, g: 0.2121293, b: 0, a: 0.6039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15010,8 +15013,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
+  m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23074,8 +23077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 1
+  _armorCount: 5
   _armorType: 0
+  _isBase: 0
 --- !u!1 &1221980010
 GameObject:
   m_ObjectHideFlags: 0
@@ -28764,7 +28768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.24273252, b: 1, a: 0.5058824}
+  m_Color: {r: 0, g: 0.24273252, b: 1, a: 0.63529414}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34960,6 +34964,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7938292722864469661, guid: f0a1419f2b2eefd4f9de24d0bfc11c76, type: 3}
   m_PrefabInstance: {fileID: 221402957}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1871287646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871287647}
+  - component: {fileID: 1871287649}
+  - component: {fileID: 1871287648}
+  m_Layer: 5
+  m_Name: HealthText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1871287647
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871287646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 825924886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.28500003}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5.000122, y: -3.5}
+  m_SizeDelta: {x: -10, y: 7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1871287648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871287646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 50/100
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
+  m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -1.1377563, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1871287649
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871287646}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1874972779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36022,6 +36160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 0
   _armorType: 0
+  _isBase: 1
 --- !u!1 &1945778976
 GameObject:
   m_ObjectHideFlags: 0
@@ -41655,6 +41794,14 @@ PrefabInstance:
       value: Enemy1
       objectReference: {fileID: 0}
     - target: {fileID: 1508724332816526423, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
+      propertyPath: _damage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508724332816526423, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
+      propertyPath: _attackSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508724332816526423, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
       propertyPath: _playerHealth
       value: 
       objectReference: {fileID: 1654743380}
@@ -41942,6 +42089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 3
   _armorType: 0
+  _isBase: 0
 --- !u!4 &5579274895562240450
 Transform:
   m_ObjectHideFlags: 0
@@ -42209,8 +42357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 1
+  _armorCount: 10
   _armorType: 2
+  _isBase: 0
 --- !u!1 &6139099730820243148
 GameObject:
   m_ObjectHideFlags: 0
@@ -42259,6 +42408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 3
   _armorType: 1
+  _isBase: 0
 --- !u!1 &6181267198372896723
 GameObject:
   m_ObjectHideFlags: 0
@@ -42769,8 +42919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 1
+  _armorCount: 5
   _armorType: 3
+  _isBase: 0
 --- !u!4 &7569211392409945667
 Transform:
   m_ObjectHideFlags: 0
@@ -42901,6 +43052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 0
   _armorType: 1
+  _isBase: 1
 --- !u!1001 &7660621366751338170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43104,8 +43256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 1
+  _armorCount: 20
   _armorType: 1
+  _isBase: 0
 --- !u!1 &7904896079325500125
 GameObject:
   m_ObjectHideFlags: 0
@@ -43492,6 +43645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 0
   _armorType: 3
+  _isBase: 1
 --- !u!137 &8876312399693514536
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -48595,6 +48749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 2
   _armorType: 0
+  _isBase: 0
 --- !u!4 &8876312399707609052
 Transform:
   m_ObjectHideFlags: 0
@@ -48855,6 +49010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armorCount: 0
   _armorType: 2
+  _isBase: 1
 --- !u!1 &9145342980933130538
 GameObject:
   m_ObjectHideFlags: 0

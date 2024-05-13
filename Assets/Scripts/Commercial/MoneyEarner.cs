@@ -1,13 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using YG;
 
 public class MoneyEarner : MonoBehaviour
 {
     [SerializeField] private int _currentEarnPerSecond = 0;
-    [SerializeField] private float _timeForRevenue = 1;
+    [SerializeField] private float _timeForRevenue = 60;
     private int _currentMultiplier = 1;
     private float _timeLeft = 0;
     private bool _hasMagnet = false;

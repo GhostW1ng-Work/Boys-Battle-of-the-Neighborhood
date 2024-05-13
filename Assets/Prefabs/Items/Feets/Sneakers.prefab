@@ -522,8 +522,8 @@ MonoBehaviour:
   _armor: {fileID: 0}
   _priceText: {fileID: 121102257676062327}
   _armoraText: {fileID: 4397166896976723450}
-  _price: 0
-  _isBuyed: 1
+  _price: 20
+  _isBuyed: 0
   _startItem: 0
   _button: {fileID: 5648729430534975580}
 --- !u!1 &7585858379878684974
