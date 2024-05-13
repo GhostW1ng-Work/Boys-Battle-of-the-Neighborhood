@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
@@ -17,7 +15,10 @@ public class MoneyReceiver : MonoBehaviour
     private void Start()
     {
         _moneyCount = YandexGame.savesData.earnedMoneyCount;
-        _moneyText.text = _moneyText.text = "$" + _moneyCount.ToString("#,#", CultureInfo.InvariantCulture);
+        if(YandexGame.EnvironmentData.language == "ru")
+            _moneyText.text = _moneyText.text = _moneyCount.ToString("#,#", CultureInfo.InvariantCulture) + " рублей";
+        else
+            _moneyText.text = _moneyText.text = _moneyCount.ToString("#,#", CultureInfo.InvariantCulture) + " rub";
     }
 
     private void OnEnable()
@@ -37,7 +38,10 @@ public class MoneyReceiver : MonoBehaviour
 /*            _target.PlayOneShot(_sound);*/
             wallet.AddMoney(_moneyCount);
             _moneyCount = 0;
-            _moneyText.text = _moneyText.text = "$" + _moneyCount.ToString("#,#", CultureInfo.InvariantCulture);
+            if (YandexGame.EnvironmentData.language == "ru")
+                _moneyText.text = _moneyText.text = _moneyCount.ToString("#,#", CultureInfo.InvariantCulture) + " рублей";
+            else
+                _moneyText.text = _moneyText.text = _moneyCount.ToString("#,#", CultureInfo.InvariantCulture) + " rub";
             YandexGame.savesData.earnedMoneyCount = _moneyCount;
             YandexGame.SaveProgress();
         }
@@ -48,7 +52,10 @@ public class MoneyReceiver : MonoBehaviour
         if (!hasMagnet)
         {
             _moneyCount += earnedMoney;
-            _moneyText.text = _moneyText.text = "$" + _moneyCount.ToString("#,#", CultureInfo.InvariantCulture);
+            if (YandexGame.EnvironmentData.language == "ru")
+                _moneyText.text = _moneyText.text = _moneyCount.ToString("#,#", CultureInfo.InvariantCulture) + " рублей";
+            else
+                _moneyText.text = _moneyText.text = _moneyCount.ToString("#,#", CultureInfo.InvariantCulture) + " rub";
             YandexGame.savesData.earnedMoneyCount = _moneyCount;
             YandexGame.SaveProgress();
         }

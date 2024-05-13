@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using YG;
 
 public class MoneyTextUpdater : MonoBehaviour
 {
@@ -24,6 +25,14 @@ public class MoneyTextUpdater : MonoBehaviour
 
     private void OnMoneyChanged(int money)
     {
-        _moneyText.text = money.ToString();
+        switch (YandexGame.EnvironmentData.language)
+        {
+            case "ru":
+                _moneyText.text = money.ToString() + " рублей";
+                break;
+            default:
+                _moneyText.text = money.ToString() + " rub";
+                break;
+        }
     }
 }

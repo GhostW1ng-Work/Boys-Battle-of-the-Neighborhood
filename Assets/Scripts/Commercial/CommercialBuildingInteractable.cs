@@ -1,4 +1,5 @@
 using UnityEngine;
+using YG;
 
 public class CommercialBuildingInteractable : Interactable
 {
@@ -27,7 +28,22 @@ public class CommercialBuildingInteractable : Interactable
         if(_isBuyed == 0)
         {
             EnablePanel();
-            _buyButton.SetButton(_building.BuildingName, _building.Price, _building.Revenue, this);
+            switch (YandexGame.EnvironmentData.language)
+            {
+                case "en":
+                    _buyButton.SetButton(_building.BuildingNameEn, _building.Price, _building.Revenue, this);
+                    break;
+                case "ru":
+                    _buyButton.SetButton(_building.BuildingNameRu, _building.Price, _building.Revenue, this);
+                    break;
+                case "tr":
+                    _buyButton.SetButton(_building.BuildingNameTr, _building.Price, _building.Revenue, this);
+                    break;
+                case "es":
+                    _buyButton.SetButton(_building.BuildingNameEs, _building.Price, _building.Revenue, this);
+                    break;
+            }
+
         }
     }
 

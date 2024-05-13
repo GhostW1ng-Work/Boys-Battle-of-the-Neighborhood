@@ -69,7 +69,6 @@ public class GoodCreator : MonoBehaviour
         _createdGoods.Remove(good);
         if(_createdGoods.Count <= 0)
         {
-            print(_createdGoods.Count);
             _wallet.AddMoney(_money);
             _restartButton.alpha = 1;
             _restartButton.interactable = true;

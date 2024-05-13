@@ -1,7 +1,8 @@
-using System;
+ï»¿using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class ArmorButton : MonoBehaviour
 {
@@ -38,7 +39,21 @@ public class ArmorButton : MonoBehaviour
                 _isBuyed = 1;
                 _wallet.SpendMoney(_price);
                 _armorHandler.SetArmor(_armor);
-                _priceText.text = "Âûáðàòü";
+                switch (YandexGame.EnvironmentData.language)
+                {
+                    case "ru":
+                        _priceText.text = "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ";
+                        break;
+                    case "en":
+                        _priceText.text = "Choose";
+                        break;
+                    case "tr":
+                        _priceText.text = "SeÃ§in";
+                        break;
+                    case "es":
+                        _priceText.text = "Elija";
+                        break;
+                }
                 PlayerPrefs.SetInt(_armor.name + IS_BUYED, 1);
                 PlayerPrefs.Save();
                 ArmorLevelChanged?.Invoke();
@@ -47,7 +62,21 @@ public class ArmorButton : MonoBehaviour
         else
         {
             _armorHandler.SetArmor(_armor);
-            _priceText.text = "Âûáðàòü";
+            switch (YandexGame.EnvironmentData.language)
+            {
+                case "ru":
+                    _priceText.text = "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ";
+                    break;
+                case "en":
+                    _priceText.text = "Choose";
+                    break;
+                case "tr":
+                    _priceText.text = "SeÃ§in";
+                    break;
+                case "es":
+                    _priceText.text = "Elija";
+                    break;
+            }
             ArmorLevelChanged?.Invoke();
         }
     }
@@ -77,8 +106,22 @@ public class ArmorButton : MonoBehaviour
             _priceText.text = _price.ToString();
         }
         else
-        { 
-            _priceText.text = "Âûáðàòü";
+        {
+            switch (YandexGame.EnvironmentData.language)
+            {
+                case "ru":
+                    _priceText.text = "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ";
+                    break;
+                case "en":
+                    _priceText.text = "Choose";
+                    break;
+                case "tr":
+                    _priceText.text = "SeÃ§in";
+                    break;
+                case "es":
+                    _priceText.text = "Elija";
+                    break;
+            }
         }
         _armoraText.text = _armor.ArmorCount.ToString();
     }
