@@ -1,5 +1,5 @@
 {
-    "idSave": 4,
+    "idSave": 19,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -11,17 +11,20 @@
         false
     ],
     "currentWeapon": {
-        "instanceID": 0
+        "instanceID": 32650
     },
     "armor": [
         {
-            "instanceID": 32050
+            "instanceID": 32716
         },
         {
-            "instanceID": 32050
+            "instanceID": -38994
         },
         {
-            "instanceID": 30906
+            "instanceID": 32748
+        },
+        {
+            "instanceID": 32818
         }
     ],
     "currentEarnPerTime": 0,
