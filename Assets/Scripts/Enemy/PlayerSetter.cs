@@ -19,6 +19,8 @@ public class PlayerSetter : Interactable
     private Enemy _enemy;
 
     public event Action PlayerLosed;
+    public static event Action FightStarted;
+    public static event Action FightEnded;
 
     public bool PlayerIsStay => _playerIsStay;
 
@@ -54,6 +56,7 @@ public class PlayerSetter : Interactable
         }
         else
         {
+            FightEnded?.Invoke();
             _healthBar.gameObject.SetActive(false);
             _playerIsStay = false;
             _brain.enabled = true;
@@ -70,6 +73,7 @@ public class PlayerSetter : Interactable
         _brain.enabled = true;
         _player.SetTarget(null);
         _player.SetInput(true);
+        FightEnded?.Invoke();
     }
 
     private void OnDied()
@@ -79,10 +83,12 @@ public class PlayerSetter : Interactable
         _brain.enabled = true;
         _player.SetTarget(null);
         _player.SetInput(true);
+        FightEnded?.Invoke();
     }
 
     private IEnumerator SetPlayer()
     {
+        FightStarted?.Invoke();
         _player.SetInput(false);
         _player.SetTarget(_enemy);
         _controller.enabled = false;

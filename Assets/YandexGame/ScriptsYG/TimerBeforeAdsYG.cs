@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using YG;
 
 public class TimerBeforeAdsYG : MonoBehaviour
 {
+    [SerializeField] private PlayerInput _input;
+    [SerializeField] private Canvas _canvas;
+
     [SerializeField,
         Tooltip("Объект таймера перед показом рекламы. Он будет активироваться и деактивироваться в нужное время.")]
     private GameObject secondsPanelObject;
@@ -22,9 +26,12 @@ public class TimerBeforeAdsYG : MonoBehaviour
     [SerializeField]
     private UnityEvent onHideTimer;
     private int objSecCounter;
+    private bool _isActive = true;
 
     private void Start()
     {
+        PlayerSetter.FightStarted += OnFightStarted;
+        PlayerSetter.FightEnded += OnFightEnded;
         if (secondsPanelObject)
             secondsPanelObject.SetActive(false);
 
@@ -37,13 +44,37 @@ public class TimerBeforeAdsYG : MonoBehaviour
             Debug.LogError("Fill in the array 'secondObjects'");
     }
 
+    private void OnFightStarted()
+    {
+        _isActive = false;
+    }
+
+    private void Update()
+    {
+        print(YandexGame.timerShowAd);
+    }
+
+    private void OnFightEnded()
+    {
+        _isActive = true;
+        StartCoroutine(CheckTimerAd());
+        if(YandexGame.timerShowAd >= (YandexGame.Instance.infoYG.fullscreenAdInterval - 3))
+        {
+            YandexGame.timerShowAd = YandexGame.Instance.infoYG.fullscreenAdInterval - 5;
+        }
+    }
+
     IEnumerator CheckTimerAd()
     {
-        while (true)
+        while (_isActive)
         {
             if (YandexGame.timerShowAd >= YandexGame.Instance.infoYG.fullscreenAdInterval)
             {
+
+                _canvas.enabled = false;
                 onShowTimer?.Invoke();
+                _input.enabled = false;
+                Time.timeScale = 0;
                 objSecCounter = 0;
                 if (secondsPanelObject)
                     secondsPanelObject.SetActive(true);
@@ -61,7 +92,7 @@ public class TimerBeforeAdsYG : MonoBehaviour
 
     IEnumerator TimerAdShow()
     {
-        while (true)
+        while (_isActive)
         {
             if (objSecCounter < secondObjects.Length)
             {
@@ -106,6 +137,9 @@ public class TimerBeforeAdsYG : MonoBehaviour
 
     private void RestartTimer()
     {
+        _input.enabled = true;
+        _canvas.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
         secondsPanelObject.SetActive(false);
         onHideTimer?.Invoke();
         objSecCounter = 0;
