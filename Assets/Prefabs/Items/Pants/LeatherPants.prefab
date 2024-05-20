@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f7cac9b488714d647941e0c5eebaeedb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cd4c1e9242fefc4c989c0a436eda64f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 8983444367860636659}
   - component: {fileID: 3432154687201770121}
   m_Layer: 5
-  m_Name: Legs
+  m_Name: LeatherPants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Legs
+  m_text: Leather Pants
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.1
+  m_fontSize: 16.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -753,9 +753,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041D\u043E\u0433\u0438"
-  en: Legs
-  tr: Bacaklar
+  ru: "\u041A\u043E\u0436\u0430\u043D\u044B\u0435 \u0448\u0442\u0430\u043D\u044B"
+  en: Leather Pants
+  tr: Deri pantalon
   az: 
   be: 
   he: 
@@ -772,7 +772,7 @@ MonoBehaviour:
   tk: 
   uk: 
   uz: 
-  es: Piernas
+  es: Pantalones de cuero
   pt: 
   ar: 
   id: 

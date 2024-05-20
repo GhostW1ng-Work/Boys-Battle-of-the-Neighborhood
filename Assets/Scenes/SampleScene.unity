@@ -4247,7 +4247,6 @@ MonoBehaviour:
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: a71675dedd0ac9a4faccd1670e02f014, type: 3}
-  - {fileID: 3432154687201770121, guid: fd7efecbae0ec5147a04e9a51be3ff1a, type: 3}
   - {fileID: 3432154687201770121, guid: 63a9a8a603530c9479ce73e36f2cc649, type: 3}
   - {fileID: 3432154687201770121, guid: 734fd0e488e71414f903d4e61a4b4471, type: 3}
   - {fileID: 3432154687201770121, guid: 2ec5534acff0fec46b4b28d24891f1c9, type: 3}
@@ -15178,8 +15177,8 @@ MonoBehaviour:
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: 9d1e5abd35769c748b5914733eadd6cc, type: 3}
-  - {fileID: 3432154687201770121, guid: f2f77763e054c85408022c907def8d9e, type: 3}
-  - {fileID: 3432154687201770121, guid: e81e711c2cad4c0458259289b9a550ab, type: 3}
+  - {fileID: 3432154687201770121, guid: e056f17f01d4815489bb3c5bca0d3366, type: 3}
+  - {fileID: 3432154687201770121, guid: 18e86898827052347b80d31ba8e3cf2a, type: 3}
   _armors:
   - {fileID: 4957605394379502560}
   - {fileID: 799330695}
@@ -20565,8 +20564,8 @@ MonoBehaviour:
   _playerWallet: {fileID: 1654743376}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
-  - {fileID: 3432154687201770121, guid: 7dd385aa580e40142999b83dd96c501c, type: 3}
-  - {fileID: 3432154687201770121, guid: 3040680541f52d744bc32e5bae79d06c, type: 3}
+  - {fileID: 3432154687201770121, guid: 20476427c040e994ebd8e216737655f3, type: 3}
+  - {fileID: 3432154687201770121, guid: 25ac2feef6c805d4ea209aac6b9652d1, type: 3}
   _armors:
   - {fileID: 4957605394511468584}
   - {fileID: 4957605393808462102}
