@@ -1,5 +1,5 @@
 {
-    "idSave": 27,
+    "idSave": 105,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -15,9 +15,9 @@
     },
     "armor": [
         {
-            "instanceID": 1277168
+            "instanceID": 0
         }
     ],
-    "currentEarnPerTime": 0,
-    "earnedMoneyCount": 0
+    "currentEarnPerTime": 75,
+    "earnedMoneyCount": 150
 }
