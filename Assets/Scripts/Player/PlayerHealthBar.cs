@@ -12,6 +12,11 @@ public class PlayerHealthBar : MonoBehaviour
         _slider = GetComponent<Slider>();
     }
 
+    private void OnDisable()
+    {
+        
+    }
+
     private void Start()
     {
         _slider.maxValue = _player.MaxHealth;

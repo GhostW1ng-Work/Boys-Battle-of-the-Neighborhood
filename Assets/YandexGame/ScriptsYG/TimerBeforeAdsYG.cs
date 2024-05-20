@@ -32,6 +32,9 @@ public class TimerBeforeAdsYG : MonoBehaviour
     {
         PlayerSetter.FightStarted += OnFightStarted;
         PlayerSetter.FightEnded += OnFightEnded;
+        MinigameActivator.MinigameActivated += OnFightStarted;
+        ClosePanelButton.MinigameClosed += OnFightEnded;
+
         if (secondsPanelObject)
             secondsPanelObject.SetActive(false);
 
@@ -49,19 +52,10 @@ public class TimerBeforeAdsYG : MonoBehaviour
         _isActive = false;
     }
 
-    private void Update()
-    {
-        print(YandexGame.timerShowAd);
-    }
-
     private void OnFightEnded()
     {
         _isActive = true;
         StartCoroutine(CheckTimerAd());
-        if(YandexGame.timerShowAd >= (YandexGame.Instance.infoYG.fullscreenAdInterval - 3))
-        {
-            YandexGame.timerShowAd = YandexGame.Instance.infoYG.fullscreenAdInterval - 5;
-        }
     }
 
     IEnumerator CheckTimerAd()

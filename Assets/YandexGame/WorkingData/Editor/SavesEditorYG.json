@@ -1,0 +1,19 @@
+{
+    "idSave": 15,
+    "isFirstSession": false,
+    "language": "en",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "currentWeapon": {
+        "instanceID": 0
+    },
+    "armor": [],
+    "currentEarnPerTime": 0,
+    "earnedMoneyCount": 0
+}

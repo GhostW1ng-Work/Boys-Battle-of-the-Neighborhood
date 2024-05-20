@@ -18,6 +18,16 @@ public class PlayerHealth : MonoBehaviour
         _currentHealth = _maxHealth;
     }
 
+    private void OnEnable()
+    {
+        PlayerSetter.FightEnded += OnFightEnded;   
+    }
+
+    private void OnDisable()
+    {
+        PlayerSetter.FightEnded -= OnFightEnded;
+    }
+
     public void TakeDamage(int damage)
     {
         damage -= _armorHandler.GetArmorLevel();
@@ -29,6 +39,11 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
+    }
+
+    private void OnFightEnded()
+    {
+        _currentHealth = _maxHealth;
     }
 
     private void Die()

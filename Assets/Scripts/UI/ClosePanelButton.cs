@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -9,6 +10,8 @@ public class ClosePanelButton : MonoBehaviour
     [SerializeField] private CanvasGroup _panel;
 
     private Button _button;
+
+    public static event Action MinigameClosed;
 
     private void Awake()
     {
@@ -27,6 +30,7 @@ public class ClosePanelButton : MonoBehaviour
 
     private void OnClick()
     {
+        MinigameClosed?.Invoke();
         _goodCreator.RemoveGoods();
         _panel.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
