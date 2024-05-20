@@ -241,7 +241,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Orcs
+  m_Name: Goblin
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -410,7 +410,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: f94800f923150e441aeaaab5c36bf4b8, type: 3}
+  m_Motion: {fileID: 7572344613039948371, guid: 4320f7bd7465cef478f6277e058e2aa0, type: 3}
   m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -599,7 +599,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: f1fa0d0d77713b741b28a6ba90cbdb9c, type: 3}
+    m_Motion: {fileID: 2562888284788868603, guid: 31d5996eae82a104697e16328bac2342, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
