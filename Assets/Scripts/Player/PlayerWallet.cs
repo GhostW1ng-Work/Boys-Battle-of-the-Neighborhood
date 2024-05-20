@@ -16,7 +16,7 @@ public class PlayerWallet : MonoBehaviour
         }
         else
         {
-            Money = 0;
+            Money = 1000000;
         }
         MoneyChanged?.Invoke(Money);
     }
