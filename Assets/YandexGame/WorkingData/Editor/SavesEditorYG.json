@@ -1,5 +1,5 @@
 {
-    "idSave": 105,
+    "idSave": 197,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -18,6 +18,6 @@
             "instanceID": 0
         }
     ],
-    "currentEarnPerTime": 75,
-    "earnedMoneyCount": 150
+    "currentEarnPerTime": 155,
+    "earnedMoneyCount": 2010
 }

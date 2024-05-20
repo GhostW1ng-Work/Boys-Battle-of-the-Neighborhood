@@ -5,6 +5,7 @@ public class CommercialBuildingInteractable : Interactable
 {
     private const string IS_BUYED = "IsBuyed";
     [SerializeField] private PlayerWallet _wallet;
+    [SerializeField] private MeshRenderer[] _goods;
     [SerializeField] private CommercialBuilding _building;
     [SerializeField] private CanvasGroup _buyPanel;
     [SerializeField] private CommercialButton _buyButton;
@@ -20,6 +21,21 @@ public class CommercialBuildingInteractable : Interactable
         else
         {
             _isBuyed = 0;
+        }
+
+        if (_isBuyed == 1)
+        {
+            for (int i = 0; i < _goods.Length; i++)
+            {
+                _goods[i].gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < _goods.Length; i++)
+            {
+                _goods[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -58,6 +74,10 @@ public class CommercialBuildingInteractable : Interactable
     public void SetIsBuyed()
     {
         _isBuyed = 1;
+        for (int i = 0; i < _goods.Length; i++)
+        {
+            _goods[i].gameObject.SetActive(true);
+        }
         PlayerPrefs.SetInt(_building.BuildingName + IS_BUYED, 1);
         PlayerPrefs.Save();
     }
