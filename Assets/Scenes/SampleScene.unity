@@ -6758,7 +6758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 5
+  _armorCount: 35
   _armorType: 3
   _isBase: 0
 --- !u!1 &347533202
@@ -9005,7 +9005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 0
+  _armorCount: 400
   _armorType: 1
   _isBase: 0
 --- !u!23 &486312025 stripped
@@ -13937,7 +13937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 0
+  _armorCount: 100
   _armorType: 1
   _isBase: 0
 --- !u!23 &802941069 stripped
@@ -22140,7 +22140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3793ea25995bb8c43b39ca4eac7c8ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  _damage: 20
 --- !u!23 &1263974044 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6092807706046965403, guid: 6eef9e580c001db45934a1ce61d95a7b, type: 3}
@@ -22783,7 +22783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 0
+  _armorCount: 55
   _armorType: 0
   _isBase: 0
 --- !u!23 &1305214264 stripped
@@ -28644,7 +28644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3793ea25995bb8c43b39ca4eac7c8ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 15
+  _damage: 60
 --- !u!1 &1677759681
 GameObject:
   m_ObjectHideFlags: 0
@@ -30057,7 +30057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3793ea25995bb8c43b39ca4eac7c8ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 700
+  _damage: 100
 --- !u!1 &1782487234
 GameObject:
   m_ObjectHideFlags: 0
@@ -34171,7 +34171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 0
+  _armorCount: 255
   _armorType: 0
   _isBase: 0
 --- !u!1 &2094287406
@@ -35239,7 +35239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1508724332816526423, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
       propertyPath: _damage
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1508724332816526423, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
       propertyPath: _animator
@@ -38197,7 +38197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 0
+  _armorCount: 60
   _armorType: 2
   _isBase: 0
 --- !u!1 &4957605393824172176
@@ -39598,7 +39598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d79d2ad328b2f42a2ac99164932fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armorCount: 0
+  _armorCount: 10
   _armorType: 0
   _isBase: 0
 --- !u!137 &4957605394379502544
