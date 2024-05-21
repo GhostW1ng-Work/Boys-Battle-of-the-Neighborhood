@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6409499456446197005}
   - component: {fileID: 5864375408866346542}
   m_Layer: 5
-  m_Name: Cheese
+  m_Name: Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb89955507fad024daecd0757dfd3c76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0eca8a723e6a02e4fabb85ad764777b4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5c81e4acb89d84b8e2356e45075531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goodType: 0
+  _goodType: 1
 --- !u!225 &5864375408866346542
 CanvasGroup:
   m_ObjectHideFlags: 0
