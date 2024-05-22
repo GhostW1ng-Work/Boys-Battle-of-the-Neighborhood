@@ -39,7 +39,7 @@ public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         _canvasGroup.alpha = 0.6f;
         _canvasGroup.blocksRaycasts = false;
-        transform.parent = _goodsPanel.transform;
+        transform.SetParent(_goodsPanel.transform);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -51,7 +51,7 @@ public class Good : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         _canvasGroup.alpha = 1f;
         _canvasGroup.blocksRaycasts = true;
-        transform.parent = _parent.transform;
+        transform.SetParent(_parent.transform);
     }
 
     public void OnPointerDown(PointerEventData eventData)

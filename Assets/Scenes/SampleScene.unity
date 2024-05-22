@@ -5093,7 +5093,7 @@ MonoBehaviour:
   _createdGoods: []
   _minGoodForSpawn: 3
   _maxGoodForSpawn: 10
-  _money: 10
+  _money: 50
 --- !u!114 &273845303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8235,6 +8235,10 @@ PrefabInstance:
       propertyPath: _buyButton
       value: 
       objectReference: {fileID: 436099252}
+    - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
+      propertyPath: _newLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
       propertyPath: _goods.Array.size
       value: 65
@@ -15199,6 +15203,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 436099252}
     - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
+      propertyPath: _newLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
       propertyPath: _goods.Array.size
       value: 104
       objectReference: {fileID: 0}
@@ -21011,6 +21019,10 @@ PrefabInstance:
       propertyPath: _buyButton
       value: 
       objectReference: {fileID: 436099252}
+    - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
+      propertyPath: _newLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
       propertyPath: _goods.Array.size
       value: 50
@@ -35389,6 +35401,10 @@ PrefabInstance:
       propertyPath: _buyButton
       value: 
       objectReference: {fileID: 436099252}
+    - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
+      propertyPath: _newLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3851267129979156792, guid: 7ebfd2362eaa875438a9e7e9bab61093, type: 3}
       propertyPath: _goods.Array.size
       value: 74

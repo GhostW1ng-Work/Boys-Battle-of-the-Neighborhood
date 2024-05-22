@@ -10,10 +10,13 @@ public class GoodTaker : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if(eventData.pointerDrag != null && eventData.pointerDrag.GetComponent<Good>().GoodType == _goodType)
+        if(eventData.pointerDrag != null )
         {
-            GoodTaked?.Invoke(eventData.pointerDrag.GetComponent<Good>());
-            Destroy(eventData.pointerDrag.GetComponent<RectTransform>().gameObject);
+            if(eventData.pointerDrag.GetComponent<Good>().GoodType == _goodType)
+            {
+                GoodTaked?.Invoke(eventData.pointerDrag.GetComponent<Good>());
+                Destroy(eventData.pointerDrag.GetComponent<RectTransform>().gameObject);
+            }
         }
     }
 }
