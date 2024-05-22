@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public float CurrentHealth => _currentHealth;
 
     public event Action Died;
+    public static event Action AnyEnemyDied;
 
     private void Awake()
     {
@@ -66,6 +67,7 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         Died?.Invoke();
+        AnyEnemyDied?.Invoke();
         PlayerPrefs.SetInt(name + IS_DIED, 1);
         Destroy(gameObject);
     }

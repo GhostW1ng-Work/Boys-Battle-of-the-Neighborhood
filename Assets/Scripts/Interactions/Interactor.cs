@@ -8,6 +8,7 @@ public class Interactor : MonoBehaviour
 {
     [SerializeField] private float _range;
     [SerializeField] private LayerMask _interactionLayer;
+    [SerializeField] private CanvasGroup _interactionText;
 
     void Update()
     {
@@ -16,6 +17,7 @@ public class Interactor : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _range, _interactionLayer))
         {
+            _interactionText.alpha = 1;
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (hit.collider.TryGetComponent(out Interactable interactable))
@@ -24,6 +26,10 @@ public class Interactor : MonoBehaviour
                 }
             }
 
+        }
+        else
+        {
+            _interactionText.alpha = 0;
         }
     }
 }

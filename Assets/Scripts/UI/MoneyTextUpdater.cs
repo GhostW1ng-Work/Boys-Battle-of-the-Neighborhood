@@ -25,14 +25,6 @@ public class MoneyTextUpdater : MonoBehaviour
 
     private void OnMoneyChanged(int money)
     {
-        switch (YandexGame.EnvironmentData.language)
-        {
-            case "ru":
-                _moneyText.text = money.ToString() + " рублей";
-                break;
-            default:
-                _moneyText.text = money.ToString() + " rub";
-                break;
-        }
+        _moneyText.text = money.ToString();
     }
 }

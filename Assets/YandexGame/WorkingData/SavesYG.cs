@@ -23,6 +23,8 @@ namespace YG
         public List<Armor> armor = new List<Armor>();
         public int currentEarnPerTime = 0;
         public int earnedMoneyCount = 0;
+        public bool isWin = false;
+        public int deadEnemiesCount = 0;
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
