@@ -4,6 +4,7 @@ using YG;
 
 public class PlayerAttacker : MonoBehaviour
 {
+    [SerializeField] private AudioClip _attackSound;
     [SerializeField] private Enemy _currentEnemy;
     [SerializeField] private Weapon _weapon;
     [SerializeField] private int _armDamage;
@@ -45,6 +46,7 @@ public class PlayerAttacker : MonoBehaviour
 
     private void Attack()
     {
+        AudioSource.PlayClipAtPoint(_attackSound, transform.position);
         if(_weapon != null)
         {
             _currentEnemy.TakeDamage(_weapon.Damage);

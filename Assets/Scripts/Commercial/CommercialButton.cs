@@ -1,9 +1,12 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CommercialButton : MonoBehaviour
 {
+    [SerializeField] private AudioSource _target;
+    [SerializeField] private AudioClip _clip;
     [SerializeField] private PlayerWallet _wallet;
     [SerializeField] private MoneyEarner _moneyEarner;
     [SerializeField] private CanvasGroup _buyPanel;
@@ -46,6 +49,7 @@ public class CommercialButton : MonoBehaviour
     {
         if(_wallet.Money >= _currentPrice)
         {
+            _target.PlayOneShot(_clip);
             _interactable.SetIsBuyed();
             _wallet.SpendMoney(_currentPrice);
             _moneyEarner.IncreaseEarnPerSecond(_currentRevenue);

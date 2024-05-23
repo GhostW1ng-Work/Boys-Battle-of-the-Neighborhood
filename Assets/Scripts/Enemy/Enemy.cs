@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     private const string IS_DIED = "IsDied";
 
+    [SerializeField] private AudioClip _hitSound;
     [SerializeField] private float _maxHealth;
 
     private float _currentHealth;
@@ -57,6 +58,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        AudioSource.PlayClipAtPoint(_hitSound, transform.position);
         _currentHealth -= damage;
         if(_currentHealth <= 0) 
         {

@@ -5,8 +5,8 @@ using YG;
 
 public class MoneyReceiver : MonoBehaviour
 {
-    /*    [SerializeField] private AudioSource _target;
-        [SerializeField] private AudioClip _sound;*/
+    [SerializeField] private AudioSource _target;
+    [SerializeField] private AudioClip _sound;
     [SerializeField] private MoneyEarner _moneyEarner;
     [SerializeField] private TMP_Text _moneyText;
 
@@ -32,7 +32,7 @@ public class MoneyReceiver : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerWallet wallet))
         {
-            /*            _target.PlayOneShot(_sound);*/
+            _target.PlayOneShot(_sound);
             wallet.AddMoney(_moneyCount);
             _moneyCount = 0;
             _moneyText.text = _moneyText.text = _moneyCount.ToString("#,#", CultureInfo.InvariantCulture);
