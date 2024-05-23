@@ -8,6 +8,8 @@ public class ArmorButton : MonoBehaviour
 {
     private const string IS_BUYED = "IsBuyed";
     [SerializeField] private PlayerWallet _wallet;
+    [SerializeField] private AudioSource _target;
+    [SerializeField] private AudioClip _sound;
     [SerializeField] private ArmorHandler _armorHandler;
     [SerializeField] private Armor _armor;
     [SerializeField] private TMP_Text _priceText;
@@ -36,6 +38,7 @@ public class ArmorButton : MonoBehaviour
         {
             if(_wallet.Money >= _price)
             {
+                _target.PlayOneShot(_sound);
                 _isBuyed = 1;
                 _wallet.SpendMoney(_price);
                 _armorHandler.SetArmor(_armor);
@@ -129,5 +132,11 @@ public class ArmorButton : MonoBehaviour
     public void SetPlayerWallet(PlayerWallet wallet)
     {
         _wallet = wallet;
+    }
+
+    public void SetAudio(AudioSource target, AudioClip sound)
+    {
+        _target = target;
+        _sound = sound;
     }
 } 

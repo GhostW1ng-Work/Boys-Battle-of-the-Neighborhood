@@ -4483,6 +4483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerWallet: {fileID: 1654743376}
+  _target: {fileID: 1963460961}
+  _sound: {fileID: 8300000, guid: 2a73d44b221328849bc5f2db064ec37a, type: 3}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: a71675dedd0ac9a4faccd1670e02f014, type: 3}
@@ -7144,6 +7146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerWallet: {fileID: 1654743376}
   _itemHandler: {fileID: 1009562546}
+  _target: {fileID: 1963460961}
+  _sound: {fileID: 8300000, guid: 2a73d44b221328849bc5f2db064ec37a, type: 3}
   _weaponButtons:
   - {fileID: 3809667877158726519, guid: 4aaed9e449d48fa40a81b47db0c348f0, type: 3}
   - {fileID: 3809667877158726519, guid: 544dd3bd9d7ba4a458dd97b30b78b8a1, type: 3}
@@ -17628,6 +17632,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerWallet: {fileID: 1654743376}
+  _target: {fileID: 1963460961}
+  _sound: {fileID: 8300000, guid: 2a73d44b221328849bc5f2db064ec37a, type: 3}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: 9d1e5abd35769c748b5914733eadd6cc, type: 3}
@@ -23679,6 +23685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerWallet: {fileID: 1654743376}
+  _target: {fileID: 1963460961}
+  _sound: {fileID: 8300000, guid: 2a73d44b221328849bc5f2db064ec37a, type: 3}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: 20476427c040e994ebd8e216737655f3, type: 3}
@@ -26005,6 +26013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerWallet: {fileID: 1654743376}
+  _target: {fileID: 1963460961}
+  _sound: {fileID: 8300000, guid: 2a73d44b221328849bc5f2db064ec37a, type: 3}
   _itemHandler: {fileID: 1009562546}
   _armorButton:
   - {fileID: 3432154687201770121, guid: 1a8b91b3c45edb243a4b568d05b4cd69, type: 3}
@@ -29055,6 +29065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa8280e07cb97440aa371fda295cf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSound: {fileID: 8300000, guid: e4b229d1cd4c5954c982c44b6f42eb27, type: 3}
   _maxHealth: 100
   _armorHandler: {fileID: 2091621794}
 --- !u!114 &1654743385
@@ -36113,10 +36124,6 @@ PrefabInstance:
       propertyPath: _playerHealth
       value: 
       objectReference: {fileID: 1654743380}
-    - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
-      propertyPath: _hitSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 3df9bbbc130ccb344af5f3fc793a630f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5457768517553589468, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
@@ -38916,7 +38923,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4957605394222791376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

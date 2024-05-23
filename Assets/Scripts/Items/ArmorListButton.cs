@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class ArmorListButton : MonoBehaviour
 {
     [SerializeField] private PlayerWallet _playerWallet;
+    [SerializeField] private AudioSource _target;
+    [SerializeField] private AudioClip _sound;
     [SerializeField] private ItemHandler _itemHandler;
     [SerializeField] private List<ArmorButton> _armorButton;
     [SerializeField] private List<Armor> _armors;
@@ -44,7 +46,8 @@ public class ArmorListButton : MonoBehaviour
             newButton.SetArmorHandler(_armorHandler);
             newButton.SetArmor(_armors[i]);
             newButton.SetPlayerWallet(_playerWallet);
-            newButton.transform.parent = _contentParent;
+            newButton.SetAudio(_target, _sound);
+            newButton.transform.SetParent(_contentParent);
             _itemHandler.AddButton(newButton);
         }
     }

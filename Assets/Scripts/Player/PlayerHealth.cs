@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private AudioClip _hitSound;
     [SerializeField] private int _maxHealth;
     [SerializeField] private ArmorHandler _armorHandler;
 
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        AudioSource.PlayClipAtPoint(_hitSound, transform.position);
         damage -= _armorHandler.GetArmorLevel();
         if (damage <= 0)
             damage = 1;

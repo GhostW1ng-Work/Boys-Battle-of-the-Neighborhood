@@ -7,6 +7,8 @@ public class WeaponButton : MonoBehaviour
 {
     private const string IS_BUYED = "IsBuyed";
     [SerializeField] private PlayerWallet _wallet;
+    [SerializeField] private AudioSource _target;
+    [SerializeField] private AudioClip _sound;
     [SerializeField] private PlayerAttacker _playerAttacker;
     [SerializeField] private Weapon _weapon;
     [SerializeField] private TMP_Text _priceText;
@@ -82,5 +84,11 @@ public class WeaponButton : MonoBehaviour
     public void SetPlayerWallet(PlayerWallet wallet)
     {
         _wallet = wallet;
+    }
+
+    public void SetAudio(AudioSource target, AudioClip clip)
+    {
+        _target = target;
+        _sound = clip;
     }
 }

@@ -6,6 +6,8 @@ public class WeaponListButton : MonoBehaviour
 {
     [SerializeField] private PlayerWallet _playerWallet;
     [SerializeField] private ItemHandler _itemHandler;
+    [SerializeField] private AudioSource _target;
+    [SerializeField] private AudioClip _sound;
     [SerializeField] private List<WeaponButton> _weaponButtons;
     [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private PlayerAttacker _armorHandler;
@@ -44,7 +46,7 @@ public class WeaponListButton : MonoBehaviour
             newButton.SetArmorHandler(_armorHandler);
             newButton.SetArmor(_weapons[i]);
             newButton.SetPlayerWallet(_playerWallet);
-            newButton.transform.parent = _contentParent;
+            newButton.transform.SetParent(_contentParent);
             _itemHandler.AddButton(newButton);
         }
     }
