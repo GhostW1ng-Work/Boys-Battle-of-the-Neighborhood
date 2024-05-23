@@ -1,5 +1,5 @@
 {
-    "idSave": 628,
+    "idSave": 656,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -28,7 +28,7 @@
         }
     ],
     "currentEarnPerTime": 15,
-    "earnedMoneyCount": 495,
+    "earnedMoneyCount": 60,
     "isWin": false,
     "deadEnemiesCount": 2
 }
