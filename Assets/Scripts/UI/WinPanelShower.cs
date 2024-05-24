@@ -25,7 +25,7 @@ public class WinPanelShower : MonoBehaviour
     {
         _currentDiedEnemies++;
         YandexGame.savesData.deadEnemiesCount++;
-
+        print(YandexGame.savesData.deadEnemiesCount);
         if(_currentDiedEnemies >= _enemiesCount)
         {
             Winned?.Invoke();
