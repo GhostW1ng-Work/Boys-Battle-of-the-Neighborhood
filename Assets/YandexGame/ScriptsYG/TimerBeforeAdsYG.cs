@@ -8,6 +8,7 @@ public class TimerBeforeAdsYG : MonoBehaviour
 {
     [SerializeField] private PlayerInput _input;
     [SerializeField] private Canvas _canvas;
+    [SerializeField] private MobileInputController _mobileInput;
 
     [SerializeField,
         Tooltip("Объект таймера перед показом рекламы. Он будет активироваться и деактивироваться в нужное время.")]
@@ -65,6 +66,8 @@ public class TimerBeforeAdsYG : MonoBehaviour
             if (YandexGame.timerShowAd >= YandexGame.Instance.infoYG.fullscreenAdInterval)
             {
 
+                if (YandexGame.EnvironmentData.isMobile)
+                    _mobileInput.gameObject.SetActive(false);
                 _canvas.enabled = false;
                 onShowTimer?.Invoke();
                 _input.enabled = false;
@@ -131,6 +134,8 @@ public class TimerBeforeAdsYG : MonoBehaviour
 
     private void RestartTimer()
     {
+        if (YandexGame.EnvironmentData.isMobile)
+            _mobileInput.gameObject.SetActive(true);
         _input.enabled = true;
         _canvas.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;

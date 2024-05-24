@@ -932,7 +932,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fda8ec40532333d43a6433176a264e37, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3027,6 +3027,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 424843345}
+    - target: {fileID: 8275278890968826827, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
+      propertyPath: _mobileInput
+      value: 
+      objectReference: {fileID: 803284878}
     - target: {fileID: 8275278890968826827, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
       propertyPath: realtimeSeconds
       value: 1
@@ -31428,7 +31432,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
