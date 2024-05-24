@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class CloseMarket : MonoBehaviour
 
     private Button _button;
 
+    public static event Action MarketClosed;
     private void Awake()
     {
         _button = GetComponent<Button>();
@@ -24,6 +26,7 @@ public class CloseMarket : MonoBehaviour
 
     private void DisablePanel()
     {
+        MarketClosed?.Invoke();
         Cursor.lockState = CursorLockMode.Locked;
         _dillerPanel.alpha = 0;
         _dillerPanel.interactable = false;
