@@ -4,6 +4,7 @@ using YG;
 public class Interactor : MonoBehaviour
 {
     [SerializeField] private float _range;
+    [SerializeField] private Transform _playerCameraRoot;
     [SerializeField] private LayerMask _interactionLayer;
     [SerializeField] private CanvasGroup _interactionText;
     [SerializeField] private MobileInteractButton _interactionMobileButton;
@@ -11,9 +12,8 @@ public class Interactor : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, _range, _interactionLayer))
+        if (Physics.Raycast(_playerCameraRoot.position,_playerCameraRoot.forward, out hit, _range, _interactionLayer))
         {
             if (YandexGame.EnvironmentData.isMobile)
             {

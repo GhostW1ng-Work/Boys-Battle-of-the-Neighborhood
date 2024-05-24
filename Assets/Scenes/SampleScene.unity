@@ -31394,6 +31394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _range: 5
+  _playerCameraRoot: {fileID: 582512121}
   _interactionLayer:
     serializedVersion: 2
     m_Bits: 128
