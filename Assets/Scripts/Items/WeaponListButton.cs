@@ -46,6 +46,7 @@ public class WeaponListButton : MonoBehaviour
             newButton.SetArmorHandler(_armorHandler);
             newButton.SetArmor(_weapons[i]);
             newButton.SetPlayerWallet(_playerWallet);
+            newButton.SetAudio(_target, _sound);
             newButton.transform.SetParent(_contentParent);
             _itemHandler.AddButton(newButton);
         }

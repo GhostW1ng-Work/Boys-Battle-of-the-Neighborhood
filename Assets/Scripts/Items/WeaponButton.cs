@@ -37,6 +37,7 @@ public class WeaponButton : MonoBehaviour
             if (_wallet.Money >= _price)
             {
                 _isBuyed = 1;
+                _target.PlayOneShot(_sound);
                 _wallet.SpendMoney(_price);
                 _playerAttacker.SetWeapon(_weapon);
                 _priceText.text = "Выбрать";

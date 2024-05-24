@@ -5,8 +5,10 @@ using YG;
 public class ArmorHandler : MonoBehaviour
 {
     [SerializeField] private List<Armor> _armor;
+    [SerializeField] private Armor _legs;
 
     private int _armorLevel;
+    private int _pantsCount = 0;
 
     private void Start()
     {
@@ -15,8 +17,23 @@ public class ArmorHandler : MonoBehaviour
         {
             for (int i = 0; i < _armor.Count; i++)
             {
+                if (_armor[i].ArmorType == ArmorType.Pants)
+                {
+                    _pantsCount++;
+                }
+
                 _armor[i].gameObject.SetActive(true);
             }
+            if (_pantsCount <= 0)
+            {
+                _armor.Add(_legs);
+                _legs.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            _armor.Add(_legs);
+            _legs.gameObject.SetActive(true);
         }
     }
 

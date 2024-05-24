@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using YG;
 
@@ -7,6 +8,8 @@ public class WinPanelShower : MonoBehaviour
 
     private CanvasGroup _canvasGroup;
     private int _currentDiedEnemies = 0;
+
+    public event Action Winned;
 
     private void OnEnable()
     {
@@ -25,6 +28,7 @@ public class WinPanelShower : MonoBehaviour
 
         if(_currentDiedEnemies >= _enemiesCount)
         {
+            Winned?.Invoke();
             YandexGame.savesData.isWin = true;
             _canvasGroup.alpha = 1;
             _canvasGroup.interactable = true;
