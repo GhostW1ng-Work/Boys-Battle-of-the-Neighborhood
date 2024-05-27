@@ -3,6 +3,8 @@ using YG;
 
 public class MobileInputController : MonoBehaviour
 {
+    [SerializeField] private WinPanelShower _win;
+
     private void Start()
     {
         if (YandexGame.EnvironmentData.isMobile)
@@ -11,11 +13,21 @@ public class MobileInputController : MonoBehaviour
             ClosePanelButton.MinigameClosed += OnClosed;
             OpenMarket.MarketOpened += OnActivated;
             CloseMarket.MarketClosed += OnClosed;
+            _win.Winned += OnWinned;
         }
         else
         {
             OnActivated();
         }
+    }
+
+    public void OnWinned()
+    {
+        gameObject.SetActive(false);
+        MinigameActivator.MinigameActivated -= OnActivated;
+        ClosePanelButton.MinigameClosed -= OnClosed;
+        OpenMarket.MarketOpened -= OnActivated;
+        CloseMarket.MarketClosed -= OnClosed;
     }
 
     private void OnActivated()

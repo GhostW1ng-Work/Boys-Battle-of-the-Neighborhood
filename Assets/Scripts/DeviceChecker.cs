@@ -3,6 +3,7 @@ using YG;
 
 public class DeviceChecker : MonoBehaviour
 {
+    [SerializeField] private MeshRenderer[] _renderers;
     [SerializeField] private CanvasGroup _mobileUI;
 
     private void Start()

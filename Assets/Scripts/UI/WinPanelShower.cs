@@ -1,10 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using YG;
 
 public class WinPanelShower : MonoBehaviour
 {
     [SerializeField] private int _enemiesCount;
+    [SerializeField] private PlayerInput _input;
+    [SerializeField] private MobileInputController _controller;
 
     private CanvasGroup _canvasGroup;
     private int _currentDiedEnemies = 0;
@@ -26,13 +29,14 @@ public class WinPanelShower : MonoBehaviour
         _currentDiedEnemies++;
         YandexGame.savesData.deadEnemiesCount++;
         print(YandexGame.savesData.deadEnemiesCount);
-        if(_currentDiedEnemies >= _enemiesCount)
+        if (_currentDiedEnemies >= _enemiesCount)
         {
             Winned?.Invoke();
             YandexGame.savesData.isWin = true;
             _canvasGroup.alpha = 1;
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
+            _input.enabled = false;
         }
         YandexGame.SaveProgress();
     }
@@ -41,7 +45,7 @@ public class WinPanelShower : MonoBehaviour
     {
         _canvasGroup = GetComponent<CanvasGroup>();
         _currentDiedEnemies = YandexGame.savesData.deadEnemiesCount;
-        if(YandexGame.savesData.isWin == false)
+        if (YandexGame.savesData.isWin == false)
         {
             _canvasGroup.alpha = 0;
             _canvasGroup.interactable = false;
@@ -52,6 +56,8 @@ public class WinPanelShower : MonoBehaviour
             _canvasGroup.alpha = 1;
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
+            _input.enabled = false;
+            _controller.OnWinned();
         }
     }
 }
