@@ -55,6 +55,7 @@ public class TimerBeforeAdsYG : MonoBehaviour
 
     private void OnFightEnded()
     {
+        StopCoroutine(CheckTimerAd());
         _isActive = true;
         StartCoroutine(CheckTimerAd());
     }
