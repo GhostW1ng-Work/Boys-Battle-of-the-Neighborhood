@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     private const string IS_DIED = "IsDied";
 
+    [SerializeField] private Animator _animator;
     [SerializeField] private AudioClip _hitSound;
     [SerializeField] private float _maxHealth;
 
@@ -62,15 +64,17 @@ public class Enemy : MonoBehaviour
         _currentHealth -= damage;
         if(_currentHealth <= 0) 
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
-    private void Die()
+    private IEnumerator Die()
     {
         Died?.Invoke();
         AnyEnemyDied?.Invoke();
         PlayerPrefs.SetInt(name + IS_DIED, 1);
+        _animator.SetTrigger("Dead");
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 }

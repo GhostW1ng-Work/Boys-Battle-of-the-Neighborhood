@@ -6817,6 +6817,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1385863722}
+    - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
       propertyPath: _maxHealth
       value: 150
       objectReference: {fileID: 0}
@@ -12647,6 +12651,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1519300806}
     - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
       propertyPath: _maxHealth
       value: 500
@@ -24758,6 +24766,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1757926621}
+    - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
       propertyPath: _maxHealth
       value: 300
       objectReference: {fileID: 0}
@@ -34152,13 +34164,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711687744}
+  - component: {fileID: 1711687745}
   m_Layer: 0
   m_Name: SaveDeleter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1711687744
 Transform:
   m_ObjectHideFlags: 0
@@ -34174,6 +34187,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711687745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711687743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff6e0d0e23af194e826b2f956c1966a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &1713688638 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1503943105787669556, guid: 5ed459fa9af3cc54a8803d749f445718, type: 3}
@@ -40958,6 +40983,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8095031795564250235, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 246559039}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5457768517553589468, guid: ae029f51a7e0527418634f8f88dbcaef, type: 3}
