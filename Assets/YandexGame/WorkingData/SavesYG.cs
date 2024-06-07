@@ -25,6 +25,7 @@ namespace YG
         public int earnedMoneyCount = 0;
         public bool isWin = false;
         public int deadEnemiesCount = 0;
+        public bool tutorialIsEnded = false;
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

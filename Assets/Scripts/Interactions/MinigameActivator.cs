@@ -9,9 +9,11 @@ public class MinigameActivator : Interactable
     [SerializeField] private GoodCreator _creator;
 
     public static event Action MinigameActivated;
+    public event Action BakeryActivated;
 
     public override void Interact()
     {
+        BakeryActivated?.Invoke();
         MinigameActivated?.Invoke();
         _minigame.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
