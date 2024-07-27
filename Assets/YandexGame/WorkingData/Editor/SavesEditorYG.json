@@ -1,0 +1,26 @@
+{
+    "idSave": 582,
+    "isFirstSession": false,
+    "language": "en",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "currentWeapon": {
+        "instanceID": 0
+    },
+    "armor": [
+        {
+            "instanceID": 0
+        }
+    ],
+    "currentEarnPerTime": 0,
+    "earnedMoneyCount": 0,
+    "isWin": false,
+    "deadEnemiesCount": 0,
+    "tutorialIsEnded": true
+}

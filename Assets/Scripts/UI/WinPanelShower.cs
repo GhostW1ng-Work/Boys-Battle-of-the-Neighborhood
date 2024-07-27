@@ -37,6 +37,7 @@ public class WinPanelShower : MonoBehaviour
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
             _input.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
         }
         YandexGame.SaveProgress();
     }
@@ -58,6 +59,7 @@ public class WinPanelShower : MonoBehaviour
             _canvasGroup.blocksRaycasts = true;
             _input.enabled = false;
             _controller.OnWinned();
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
